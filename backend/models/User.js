@@ -66,3 +66,5 @@ module.exports = mongoose.model('User', userSchema);
 // commit-19: feat(models): add password reset token fields
 
 // commit-20: feat(models): add email verification fields
+
+// commit-21: feat(models): add last login tracking to User
