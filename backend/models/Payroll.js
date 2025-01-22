@@ -119,3 +119,5 @@ module.exports = mongoose.model('Payroll', payrollSchema);
 // commit-61: feat(payroll): add overtime pay fields
 
 // commit-62: feat(payroll): add insurance deduction fields
+
+// commit-63: feat(payroll): add pension contribution fields
