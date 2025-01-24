@@ -29,3 +29,5 @@ module.exports = mongoose.model('Role', roleSchema);
 
 
 // commit-39: feat(roles): add permission matrix
+
+// commit-40: feat(roles): add role hierarchy
