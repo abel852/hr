@@ -26,3 +26,5 @@ const leavePolicySchema = new mongoose.Schema({
 module.exports = mongoose.model('LeavePolicy', leavePolicySchema);
 
 
+
+// commit-52: feat(leave): define annual leave policy
