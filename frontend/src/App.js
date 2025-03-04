@@ -133,3 +133,5 @@ const App = () => {
 };
 
 export default App;
+
+// commit-94: feat(frontend): add routing configuration
