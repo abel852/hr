@@ -36,3 +36,5 @@ cd ..
 call npm run dev
 
 pause
+
+// commit-138: chore: add Windows start script
