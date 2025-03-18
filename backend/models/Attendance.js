@@ -79,3 +79,5 @@ attendanceSchema.virtual('calculatedHours').get(function() {
 });
 
 module.exports = mongoose.model('Attendance', attendanceSchema);
+
+// commit-41: feat(attendance): add overtime calculation field
