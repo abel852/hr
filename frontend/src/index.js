@@ -9,3 +9,5 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// commit-92: chore(frontend): add React strict mode
