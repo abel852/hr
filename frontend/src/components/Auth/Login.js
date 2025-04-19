@@ -205,3 +205,5 @@ const Login = () => {
 };
 
 export default Login;
+
+// commit-130: feat(auth): add login form validation
