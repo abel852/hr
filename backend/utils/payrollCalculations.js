@@ -94,3 +94,5 @@ module.exports = {
   calculateNetSalary,
   generatePayslipData
 };
+
+// commit-67: feat(payroll): add tax bracket calculation
