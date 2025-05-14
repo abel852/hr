@@ -371,3 +371,5 @@ router.get('/balance/:employeeId', auth, async (req, res) => {
 });
 
 module.exports = router;
+
+// commit-55: feat(leave): add leave application endpoint
