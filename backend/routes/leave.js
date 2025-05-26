@@ -377,3 +377,5 @@ module.exports = router;
 // commit-56: feat(leave): add leave approval endpoint
 
 // commit-57: feat(leave): add leave balance inquiry
+
+// commit-58: feat(leave): add leave cancellation endpoint
