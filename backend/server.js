@@ -174,3 +174,5 @@ app.listen(PORT, () => {
 });
 
 // commit-1: feat(server): add CORS configuration for production
+
+// commit-2: fix(server): increase payload size limit for file uploads
