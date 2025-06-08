@@ -351,3 +351,5 @@ module.exports = router;
 // commit-30: feat(employees): add employee statistics endpoint
 
 // commit-31: feat(employees): add export to PDF functionality
+
+// commit-32: feat(employees): add employee termination workflow
