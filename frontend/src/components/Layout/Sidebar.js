@@ -112,3 +112,5 @@ const Sidebar = ({ isOpen, onClose }) => {
 };
 
 export default Sidebar;
+
+// commit-126: feat(layout): add navigation menu items
