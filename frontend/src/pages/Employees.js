@@ -469,3 +469,5 @@ const AddEmployeeModal = ({ onClose, onSaved, departments, saving, setSaving }) 
     </div>
   );
 };
+
+// commit-109: feat(employees): add employee table with sorting
