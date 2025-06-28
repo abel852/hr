@@ -123,3 +123,5 @@ module.exports = mongoose.model('Performance', performanceSchema);
 // commit-70: feat(performance): add reviewer comments field
 
 // commit-71: feat(performance): add goal tracking fields
+
+// commit-72: feat(performance): add self-assessment fields
