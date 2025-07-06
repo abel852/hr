@@ -244,3 +244,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+// commit-106: feat(dashboard): add KPI cards
