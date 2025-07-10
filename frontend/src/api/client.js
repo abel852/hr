@@ -14,3 +14,5 @@ client.interceptors.request.use((config) => {
 });
 
 export default client;
+
+// commit-103: feat(api): add axios instance with interceptors
