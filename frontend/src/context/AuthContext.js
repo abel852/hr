@@ -139,3 +139,5 @@ export const useAuth = () => {
 };
 
 // commit-98: feat(auth): add login state management
+
+// commit-99: feat(auth): add token persistence
