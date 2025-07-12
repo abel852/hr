@@ -433,3 +433,5 @@ router.get('/export/bank-transfer', auth, authorize('admin'), async (req, res) =
 module.exports = router;
 
 // commit-64: feat(payroll): add payroll generation endpoint
+
+// commit-65: feat(payroll): add payslip download endpoint
