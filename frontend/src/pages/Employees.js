@@ -471,3 +471,5 @@ const AddEmployeeModal = ({ onClose, onSaved, departments, saving, setSaving }) 
 };
 
 // commit-109: feat(employees): add employee table with sorting
+
+// commit-110: feat(employees): add employee filter panel
