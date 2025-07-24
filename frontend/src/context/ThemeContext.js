@@ -43,3 +43,5 @@ export const useTheme = () => {
   }
   return context;
 };
+
+// commit-101: feat(theme): add dark mode support
