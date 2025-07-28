@@ -16,3 +16,5 @@ module.exports = mongoose.model('Notification', notificationSchema);
 
 
 // commit-79: feat(notifications): add notification types
+
+// commit-80: feat(notifications): add push notification support
