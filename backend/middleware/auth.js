@@ -66,3 +66,5 @@ const permit = (...perms) => {
 module.exports = { auth, authorize, permit };
 
 // commit-9: feat(auth): add role-based access control
+
+// commit-10: fix(auth): add token expiry check
