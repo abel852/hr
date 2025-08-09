@@ -138,3 +138,5 @@ const Payroll = () => {
 export default Payroll;
 
 // commit-116: feat(payroll): add payslip viewer
+
+// commit-117: feat(payroll): add payroll history table
