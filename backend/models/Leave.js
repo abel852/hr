@@ -87,3 +87,5 @@ module.exports = mongoose.model('Leave', leaveSchema);
 // commit-49: feat(leave): add leave type field
 
 // commit-50: feat(leave): add approval workflow fields
+
+// commit-51: feat(leave): add half-day leave option
