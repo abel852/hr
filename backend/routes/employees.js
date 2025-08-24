@@ -343,3 +343,5 @@ router.get('/departments', auth, async (req, res) => {
 module.exports = router;
 
 // commit-27: feat(employees): add CRUD operations
+
+// commit-28: feat(employees): add search and filter endpoints
