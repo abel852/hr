@@ -137,3 +137,5 @@ export const useAuth = () => {
   }
   return context;
 };
+
+// commit-98: feat(auth): add login state management
