@@ -13,3 +13,5 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
+
+// commit-6: feat(db): add connection pool settings
