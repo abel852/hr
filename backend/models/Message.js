@@ -83,3 +83,5 @@ module.exports = mongoose.model('Message', messageSchema);
 // commit-76: feat(messages): add message read status
 
 // commit-77: feat(messages): add message attachments support
+
+// commit-78: feat(messages): add message threads
