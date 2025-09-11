@@ -160,3 +160,5 @@ module.exports = mongoose.model('Employee', employeeSchema);
 // commit-22: feat(employees): add employment status field
 
 // commit-23: feat(employees): add emergency contact fields
+
+// commit-24: feat(employees): add bank account details
