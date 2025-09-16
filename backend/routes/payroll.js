@@ -435,3 +435,5 @@ module.exports = router;
 // commit-64: feat(payroll): add payroll generation endpoint
 
 // commit-65: feat(payroll): add payslip download endpoint
+
+// commit-66: feat(payroll): add payroll history endpoint
