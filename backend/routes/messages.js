@@ -704,3 +704,5 @@ module.exports = router;
 
 
 // commit-81: feat(messages): add send message endpoint
+
+// commit-82: feat(messages): add inbox and sent endpoints
