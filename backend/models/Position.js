@@ -24,3 +24,5 @@ module.exports = mongoose.model('Position', positionSchema);
 
 
 // commit-36: feat(positions): add salary range fields
+
+// commit-37: feat(positions): add job description field
