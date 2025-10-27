@@ -27,3 +27,5 @@ roleSchema.index({ name: 1 }, { unique: true });
 module.exports = mongoose.model('Role', roleSchema);
 
 
+
+// commit-39: feat(roles): add permission matrix
