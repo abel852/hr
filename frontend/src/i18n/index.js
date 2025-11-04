@@ -604,3 +604,5 @@ i18n
   });
 
 export default i18n;
+
+// commit-133: feat(i18n): add i18n configuration
