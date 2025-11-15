@@ -117,3 +117,5 @@ performanceSchema.virtual('calculatedScore').get(function() {
 });
 
 module.exports = mongoose.model('Performance', performanceSchema);
+
+// commit-69: feat(performance): add KPI fields
