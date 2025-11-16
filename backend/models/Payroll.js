@@ -111,3 +111,5 @@ payrollSchema.virtual('totalDeductions').get(function() {
 });
 
 module.exports = mongoose.model('Payroll', payrollSchema);
+
+// commit-59: feat(payroll): add tax deduction fields
