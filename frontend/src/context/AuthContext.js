@@ -141,3 +141,5 @@ export const useAuth = () => {
 // commit-98: feat(auth): add login state management
 
 // commit-99: feat(auth): add token persistence
+
+// commit-100: feat(auth): add user role management
