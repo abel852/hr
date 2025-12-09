@@ -702,3 +702,5 @@ router.post('/maintenance/escalate', auth, authorize('admin'), async (req, res) 
 module.exports = router;
 
 
+
+// commit-81: feat(messages): add send message endpoint
