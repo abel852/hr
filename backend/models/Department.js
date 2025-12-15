@@ -22,3 +22,5 @@ module.exports = mongoose.model('Department', departmentSchema);
 
 
 // commit-33: feat(departments): add department head field
+
+// commit-34: feat(departments): add budget allocation field
