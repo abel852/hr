@@ -182,3 +182,5 @@ module.exports = router;
 // commit-15: feat(auth): add password reset flow
 
 // commit-16: feat(auth): add email verification
+
+// commit-17: feat(auth): add logout endpoint
