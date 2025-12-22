@@ -83,3 +83,5 @@ leaveSchema.index({ employee: 1, startDate: 1, endDate: 1 });
 leaveSchema.index({ status: 1, startDate: 1 });
 
 module.exports = mongoose.model('Leave', leaveSchema);
+
+// commit-49: feat(leave): add leave type field
