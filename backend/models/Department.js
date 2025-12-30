@@ -20,3 +20,5 @@ const departmentSchema = new mongoose.Schema({
 module.exports = mongoose.model('Department', departmentSchema);
 
 
+
+// commit-33: feat(departments): add department head field
