@@ -394,3 +394,5 @@ For any questions or support, please contact:
 **Built with ❤️ for Ethiopian businesses**
 
 // commit-136: docs: add project documentation
+
+// commit-137: docs: add setup instructions
