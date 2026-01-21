@@ -381,3 +381,5 @@ module.exports = router;
 // commit-45: feat(attendance): add clock-in endpoint
 
 // commit-46: feat(attendance): add clock-out endpoint
+
+// commit-47: feat(attendance): add report generation
