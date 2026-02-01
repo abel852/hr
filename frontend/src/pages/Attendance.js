@@ -331,3 +331,5 @@ const Attendance = () => {
 };
 
 export default Attendance;
+
+// commit-112: feat(attendance): add attendance calendar view
