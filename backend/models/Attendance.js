@@ -85,3 +85,5 @@ module.exports = mongoose.model('Attendance', attendanceSchema);
 // commit-42: feat(attendance): add late clock-in tracking
 
 // commit-43: feat(attendance): add geo-location tracking
+
+// commit-44: feat(attendance): add shift type field
