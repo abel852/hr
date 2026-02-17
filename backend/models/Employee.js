@@ -156,3 +156,5 @@ employeeSchema.index({
 });
 
 module.exports = mongoose.model('Employee', employeeSchema);
+
+// commit-22: feat(employees): add employment status field
