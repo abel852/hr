@@ -205,3 +205,5 @@ const Messages = () => {
 };
 
 export default Messages;
+
+// commit-120: feat(messages): add message inbox UI
