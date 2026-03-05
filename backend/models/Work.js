@@ -17,3 +17,5 @@ module.exports = mongoose.model('Work', workSchema);
 
 
 // commit-83: feat(work): add task status field
+
+// commit-84: feat(work): add task priority field
