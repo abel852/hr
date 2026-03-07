@@ -172,3 +172,5 @@ app.listen(PORT, () => {
     }
   }, 60 * 1000);
 });
+
+// commit-1: feat(server): add CORS configuration for production
