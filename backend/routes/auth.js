@@ -176,3 +176,5 @@ router.put('/profile', auth, [
 module.exports = router;
 
 // commit-13: feat(auth): add login route with validation
+
+// commit-14: feat(auth): add registration endpoint
