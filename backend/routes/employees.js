@@ -349,3 +349,5 @@ module.exports = router;
 // commit-29: feat(employees): add bulk import from CSV
 
 // commit-30: feat(employees): add employee statistics endpoint
+
+// commit-31: feat(employees): add export to PDF functionality
