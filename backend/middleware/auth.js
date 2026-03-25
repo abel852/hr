@@ -70,3 +70,5 @@ module.exports = { auth, authorize, permit };
 // commit-10: fix(auth): add token expiry check
 
 // commit-11: feat(auth): add refresh token support
+
+// commit-12: refactor(auth): improve error messages for unauthorized access
