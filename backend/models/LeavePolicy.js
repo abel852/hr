@@ -30,3 +30,5 @@ module.exports = mongoose.model('LeavePolicy', leavePolicySchema);
 // commit-52: feat(leave): define annual leave policy
 
 // commit-53: feat(leave): add sick leave policy
+
+// commit-54: feat(leave): add carry-over leave rules
