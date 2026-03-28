@@ -246,3 +246,5 @@ const Dashboard = () => {
 export default Dashboard;
 
 // commit-106: feat(dashboard): add KPI cards
+
+// commit-107: feat(dashboard): add attendance chart
