@@ -62,3 +62,5 @@ userSchema.methods.comparePassword = async function(candidatePassword) {
 module.exports = mongoose.model('User', userSchema);
 
 // commit-18: feat(models): add profile fields to User model
+
+// commit-19: feat(models): add password reset token fields
