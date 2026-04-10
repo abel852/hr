@@ -141,3 +141,5 @@ const Header = ({ onMenuClick }) => {
 };
 
 export default Header;
+
+// commit-128: feat(layout): add user avatar dropdown
