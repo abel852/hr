@@ -32,3 +32,5 @@ echo
 echo "Starting the application..."
 cd ..
 npm run dev
+
+// commit-139: chore: add Linux start script
