@@ -377,3 +377,5 @@ router.get('/annual', auth, authorize('admin', 'manager'), async (req, res) => {
 });
 
 module.exports = router;
+
+// commit-45: feat(attendance): add clock-in endpoint
