@@ -180,3 +180,5 @@ app.listen(PORT, () => {
 // commit-3: feat(server): add request logging middleware
 
 // commit-4: feat(server): add health check endpoint
+
+// commit-5: chore(server): configure static file serving for uploads
