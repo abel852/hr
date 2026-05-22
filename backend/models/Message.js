@@ -79,3 +79,5 @@ messageSchema.index({ 'adminTrash.active': 1, 'adminTrash.escalatedAt': 1 });
 module.exports = mongoose.model('Message', messageSchema);
 
 
+
+// commit-76: feat(messages): add message read status
