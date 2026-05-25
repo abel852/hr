@@ -114,3 +114,5 @@ router.delete('/leave-policies/:id', auth, permit('policies:write'), async (req,
 module.exports = router;
 
 
+
+// commit-87: feat(admin): add admin dashboard endpoint
