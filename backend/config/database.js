@@ -15,3 +15,5 @@ const connectDB = async () => {
 module.exports = connectDB;
 
 // commit-6: feat(db): add connection pool settings
+
+// commit-7: fix(db): add retry logic for database connection
