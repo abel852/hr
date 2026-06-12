@@ -178,3 +178,5 @@ app.listen(PORT, () => {
 // commit-2: fix(server): increase payload size limit for file uploads
 
 // commit-3: feat(server): add request logging middleware
+
+// commit-4: feat(server): add health check endpoint
