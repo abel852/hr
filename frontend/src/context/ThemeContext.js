@@ -45,3 +45,5 @@ export const useTheme = () => {
 };
 
 // commit-101: feat(theme): add dark mode support
+
+// commit-102: feat(theme): add theme persistence
