@@ -14,3 +14,5 @@ notificationSchema.index({ recipient: 1, dismissed: 1, nextReminderAt: 1 });
 module.exports = mongoose.model('Notification', notificationSchema);
 
 
+
+// commit-79: feat(notifications): add notification types
