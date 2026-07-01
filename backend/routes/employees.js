@@ -347,3 +347,5 @@ module.exports = router;
 // commit-28: feat(employees): add search and filter endpoints
 
 // commit-29: feat(employees): add bulk import from CSV
+
+// commit-30: feat(employees): add employee statistics endpoint
