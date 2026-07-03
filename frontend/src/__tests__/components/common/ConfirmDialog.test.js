@@ -11,35 +11,35 @@ describe('ConfirmDialog Component', () => {
     onCancel: jest.fn(),
   };
 
-  it('should render when open', () => {
+  it('displays the dialog with title and confirmation message when open', () => {
     render(<ConfirmDialog {...defaultProps} />);
     expect(screen.getByText(defaultProps.title)).toBeInTheDocument();
     expect(screen.getByText(defaultProps.message)).toBeInTheDocument();
   });
 
-  it('should not render when closed', () => {
+  it('hides the dialog completely when open is false', () => {
     render(<ConfirmDialog {...defaultProps} open={false} />);
     expect(screen.queryByText(defaultProps.title)).not.toBeInTheDocument();
   });
 
-  it('should call onConfirm when confirm button clicked', () => {
+  it('fires the onConfirm callback when the user clicks Yes', () => {
     render(<ConfirmDialog {...defaultProps} />);
     fireEvent.click(screen.getByText('Yes'));
     expect(defaultProps.onConfirm).toHaveBeenCalled();
   });
 
-  it('should call onCancel when cancel button clicked', () => {
+  it('fires the onCancel callback when the user clicks Cancel', () => {
     render(<ConfirmDialog {...defaultProps} />);
     fireEvent.click(screen.getByText('Cancel'));
     expect(defaultProps.onCancel).toHaveBeenCalled();
   });
 
-  it('should render with custom confirm text', () => {
+  it('supports a custom label for the confirm button', () => {
     render(<ConfirmDialog {...defaultProps} confirmText="Delete" />);
     expect(screen.getByText('Delete')).toBeInTheDocument();
   });
 
-  it('should render with custom cancel text', () => {
+  it('supports a custom label for the cancel button', () => {
     render(<ConfirmDialog {...defaultProps} cancelText="Back" />);
     expect(screen.getByText('Back')).toBeInTheDocument();
   });

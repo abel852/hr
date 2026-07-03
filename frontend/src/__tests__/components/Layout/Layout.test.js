@@ -22,17 +22,17 @@ jest.mock('../../../components/Layout/Header', () => () => <div>Header</div>);
 jest.mock('../../../components/Layout/Sidebar', () => () => <div>Sidebar</div>);
 
 describe('Layout Component', () => {
-  it('should render header', () => {
+  it('includes the header component at the top of the layout', () => {
     render(<Layout />);
     expect(screen.getByText('Header')).toBeInTheDocument();
   });
 
-  it('should render sidebar', () => {
+  it('includes the sidebar component for page navigation', () => {
     render(<Layout />);
     expect(screen.getByText('Sidebar')).toBeInTheDocument();
   });
 
-  it('should render outlet content', () => {
+  it('renders child route content through the Outlet', () => {
     render(<Layout />);
     expect(screen.getByText('Outlet Content')).toBeInTheDocument();
   });

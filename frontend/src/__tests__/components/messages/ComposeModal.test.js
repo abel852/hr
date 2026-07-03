@@ -14,27 +14,27 @@ describe('ComposeModal Component', () => {
     onSent: jest.fn(),
   };
 
-  it('should render compose form', () => {
+  it('shows the compose message form with a heading', () => {
     render(<ComposeModal {...defaultProps} />);
     expect(screen.getByText('Compose Message')).toBeInTheDocument();
   });
 
-  it('should render To label', () => {
+  it('renders a label for the recipient (To) field', () => {
     render(<ComposeModal {...defaultProps} />);
     expect(screen.getByText('To')).toBeInTheDocument();
   });
 
-  it('should render Subject label', () => {
+  it('renders a label for the message subject field', () => {
     render(<ComposeModal {...defaultProps} />);
     expect(screen.getByText('Subject')).toBeInTheDocument();
   });
 
-  it('should render Send button', () => {
+  it('provides a Send button to submit the message', () => {
     render(<ComposeModal {...defaultProps} />);
     expect(screen.getByText('Send')).toBeInTheDocument();
   });
 
-  it('should render Cancel button', () => {
+  it('provides a Cancel button to dismiss the composer', () => {
     render(<ComposeModal {...defaultProps} />);
     expect(screen.getByText('Cancel')).toBeInTheDocument();
   });

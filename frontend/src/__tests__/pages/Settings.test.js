@@ -11,17 +11,17 @@ jest.mock('../../context/AuthContext', () => ({
 }));
 
 describe('Settings Page', () => {
-  it('should render settings title', () => {
+  it('displays the settings page heading', () => {
     render(<Settings />);
     expect(screen.getByText('settings.title')).toBeInTheDocument();
   });
 
-  it('should render company settings section', () => {
+  it('shows the company settings configuration section', () => {
     render(<Settings />);
     expect(screen.getByText('settings.company')).toBeInTheDocument();
   });
 
-  it('should render holidays section', () => {
+  it('shows the holidays configuration section', () => {
     render(<Settings />);
     expect(screen.getByText('settings.holidays')).toBeInTheDocument();
   });

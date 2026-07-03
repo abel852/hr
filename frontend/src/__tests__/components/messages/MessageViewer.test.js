@@ -18,22 +18,22 @@ describe('MessageViewer Component', () => {
     onReply: jest.fn(),
   };
 
-  it('should render message subject', () => {
+  it('displays the message subject line in the viewer', () => {
     render(<MessageViewer {...defaultProps} />);
     expect(screen.getByText('Test Subject')).toBeInTheDocument();
   });
 
-  it('should render message body', () => {
+  it('displays the message body content in the viewer', () => {
     render(<MessageViewer {...defaultProps} />);
     expect(screen.getByText('Test message body')).toBeInTheDocument();
   });
 
-  it('should render sender name', () => {
+  it('shows the sender name within the message details', () => {
     render(<MessageViewer {...defaultProps} />);
     expect(screen.getByText(/John Doe/)).toBeInTheDocument();
   });
 
-  it('should render close button', () => {
+  it('renders a close button to dismiss the message viewer', () => {
     render(<MessageViewer {...defaultProps} />);
     expect(screen.getByLabelText('Close')).toBeInTheDocument();
   });

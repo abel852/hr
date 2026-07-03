@@ -11,12 +11,12 @@ jest.mock('../../context/AuthContext', () => ({
 }));
 
 describe('Payroll Page', () => {
-  it('should render payroll title', () => {
+  it('displays the payroll management page heading', () => {
     render(<Payroll />);
     expect(screen.getByText('payroll.title')).toBeInTheDocument();
   });
 
-  it('should render generate payroll button', () => {
+  it('shows a button to generate payroll for the current period', () => {
     render(<Payroll />);
     expect(screen.getByText('payroll.generatePayroll')).toBeInTheDocument();
   });

@@ -15,18 +15,18 @@ jest.mock('../../../context/ThemeContext', () => ({
 }));
 
 describe('Header Component', () => {
-  it('should render the HR Management System title', () => {
+  it('displays the application title in the header bar', () => {
     render(<Header />);
     expect(screen.getByText('HR Management System')).toBeInTheDocument();
   });
 
-  it('should render theme toggle button', () => {
+  it('renders interactive buttons including the theme toggle', () => {
     render(<Header />);
     const buttons = screen.getAllByRole('button');
     expect(buttons.length).toBeGreaterThanOrEqual(1);
   });
 
-  it('should open user menu on click', () => {
+  it('reveals the profile dropdown when the user menu button is clicked', () => {
     render(<Header />);
     const userButtons = screen.getAllByRole('button');
     const lastButton = userButtons[userButtons.length - 1];

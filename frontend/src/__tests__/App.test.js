@@ -32,12 +32,12 @@ jest.mock('../i18n', () => ({
 }));
 
 describe('App Component', () => {
-  it('should render without crashing', () => {
+  it('renders the root .App wrapper without errors', () => {
     render(<App />);
     expect(document.querySelector('.App')).toBeInTheDocument();
   });
 
-  it('should render login route when not authenticated', () => {
+  it('redirects unauthenticated visitors to the login page', () => {
     render(<App />);
     expect(screen.getByText('auth.welcomeBack')).toBeInTheDocument();
   });

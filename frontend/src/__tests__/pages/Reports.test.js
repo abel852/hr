@@ -11,7 +11,7 @@ jest.mock('../../context/AuthContext', () => ({
 }));
 
 describe('Reports Page', () => {
-  it('should render reports title', () => {
+  it('displays the reports and analytics page heading', () => {
     render(<Reports />);
     expect(screen.getByText('reports.title')).toBeInTheDocument();
   });

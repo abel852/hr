@@ -31,32 +31,32 @@ jest.mock('react-hot-toast', () => ({
 }));
 
 describe('Login Component', () => {
-  it('should render welcome back title', () => {
+  it('displays a welcome-back heading on the login screen', () => {
     render(<Login />);
     expect(screen.getByText('auth.welcomeBack')).toBeInTheDocument();
   });
 
-  it('should render email input', () => {
+  it('renders an email address field for user input', () => {
     render(<Login />);
     expect(screen.getByLabelText('auth.email')).toBeInTheDocument();
   });
 
-  it('should render password input', () => {
+  it('renders a password field for user input', () => {
     render(<Login />);
     expect(screen.getByLabelText('auth.password')).toBeInTheDocument();
   });
 
-  it('should render login button', () => {
+  it('shows a login button to submit credentials', () => {
     render(<Login />);
     expect(screen.getByText('auth.loginButton')).toBeInTheDocument();
   });
 
-  it('should render remember me checkbox', () => {
+  it('includes a remember-me checkbox on the form', () => {
     render(<Login />);
     expect(screen.getByText('auth.rememberMe')).toBeInTheDocument();
   });
 
-  it('should render forgot password link', () => {
+  it('provides a forgot-password link for account recovery', () => {
     render(<Login />);
     expect(screen.getByText('auth.forgotPassword')).toBeInTheDocument();
   });

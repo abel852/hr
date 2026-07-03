@@ -26,17 +26,17 @@ describe('Messages Page', () => {
     jest.clearAllMocks();
   });
 
-  it('should render messages title', async () => {
+  it('displays the messages page heading', async () => {
     render(<Messages />);
     expect(await screen.findByText('Messages')).toBeInTheDocument();
   });
 
-  it('should render compose button', async () => {
+  it('shows a compose button to create new messages', async () => {
     render(<Messages />);
     expect(await screen.findByText('Compose')).toBeInTheDocument();
   });
 
-  it('should render inbox tab', async () => {
+  it('renders an inbox tab for viewing received messages', async () => {
     render(<Messages />);
     expect(await screen.findByText('Inbox')).toBeInTheDocument();
   });

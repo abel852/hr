@@ -11,12 +11,12 @@ jest.mock('../../context/AuthContext', () => ({
 }));
 
 describe('Performance Page', () => {
-  it('should render performance title', () => {
+  it('displays the performance management page heading', () => {
     render(<Performance />);
     expect(screen.getByText('performance.title')).toBeInTheDocument();
   });
 
-  it('should render add evaluation button', () => {
+  it('shows a button to add a new performance evaluation', () => {
     render(<Performance />);
     expect(screen.getByText('performance.addEvaluation')).toBeInTheDocument();
   });

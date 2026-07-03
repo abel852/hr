@@ -16,7 +16,7 @@ jest.mock('../../../context/AuthContext', () => ({
 }));
 
 describe('Sidebar Component', () => {
-  it('should render navigation links', () => {
+  it('renders all main navigation items (dashboard, employees, attendance, leave, payroll)', () => {
     render(<Sidebar />);
     expect(screen.getByText('nav.dashboard')).toBeInTheDocument();
     expect(screen.getByText('nav.employees')).toBeInTheDocument();
@@ -25,18 +25,18 @@ describe('Sidebar Component', () => {
     expect(screen.getByText('nav.payroll')).toBeInTheDocument();
   });
 
-  it('should have correct link paths', () => {
+  it('assigns the correct href paths to navigation links', () => {
     render(<Sidebar />);
     expect(screen.getByText('nav.dashboard').closest('a')).toHaveAttribute('href', '/dashboard');
     expect(screen.getByText('nav.employees').closest('a')).toHaveAttribute('href', '/employees');
   });
 
-  it('should render app logo', () => {
+  it('displays the HR System branding logo in the sidebar', () => {
     render(<Sidebar />);
     expect(screen.getByText('HR System')).toBeInTheDocument();
   });
 
-  it('should render logout button', () => {
+  it('provides a logout button for session termination', () => {
     render(<Sidebar />);
     expect(screen.getByText('nav.logout')).toBeInTheDocument();
   });

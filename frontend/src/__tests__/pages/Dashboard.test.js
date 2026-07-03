@@ -36,18 +36,18 @@ describe('Dashboard Page', () => {
     jest.useRealTimers();
   });
 
-  it('should show loading state initially', () => {
+  it('displays a loading spinner on initial render', () => {
     render(<Dashboard />);
     expect(document.querySelector('.animate-spin')).toBeTruthy();
   });
 
-  it('should render welcome message after loading', () => {
+  it('shows the welcome message once data has finished loading', () => {
     render(<Dashboard />);
     act(() => { jest.advanceTimersByTime(1000); });
     expect(screen.getByText(/dashboard.welcome/)).toBeInTheDocument();
   });
 
-  it('should render stat cards after loading', () => {
+  it('renders stat cards for total employees, present today, pending leaves, and payroll', () => {
     render(<Dashboard />);
     act(() => { jest.advanceTimersByTime(1000); });
     expect(screen.getByText('dashboard.totalEmployees')).toBeInTheDocument();
@@ -56,20 +56,20 @@ describe('Dashboard Page', () => {
     expect(screen.getByText('dashboard.monthlyPayroll')).toBeInTheDocument();
   });
 
-  it('should render charts after loading', () => {
+  it('renders attendance and leave request charts after loading', () => {
     render(<Dashboard />);
     act(() => { jest.advanceTimersByTime(1000); });
     expect(screen.getByText('dashboard.attendanceOverview')).toBeInTheDocument();
     expect(screen.getByText('dashboard.leaveRequests')).toBeInTheDocument();
   });
 
-  it('should render activity section after loading', () => {
+  it('shows the recent activities timeline after loading', () => {
     render(<Dashboard />);
     act(() => { jest.advanceTimersByTime(1000); });
     expect(screen.getByText('dashboard.recentActivities')).toBeInTheDocument();
   });
 
-  it('should render birthdays section after loading', () => {
+  it('shows the upcoming birthdays section after loading', () => {
     render(<Dashboard />);
     act(() => { jest.advanceTimersByTime(1000); });
     expect(screen.getByText('dashboard.upcomingBirthdays')).toBeInTheDocument();

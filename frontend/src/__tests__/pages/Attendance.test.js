@@ -22,12 +22,12 @@ describe('Attendance Page', () => {
     jest.clearAllMocks();
   });
 
-  it('should render attendance title', async () => {
+  it('loads and displays the attendance management page heading', async () => {
     render(<Attendance />);
     expect(await screen.findByText('attendance.title')).toBeInTheDocument();
   });
 
-  it('should render check-in/check-out sections', async () => {
+  it('renders both check-in and check-out buttons with their heading labels', async () => {
     render(<Attendance />);
     const checkInElements = await screen.findAllByText('attendance.checkIn');
     expect(checkInElements.length).toBe(2);

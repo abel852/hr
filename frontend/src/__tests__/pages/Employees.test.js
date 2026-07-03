@@ -22,19 +22,19 @@ describe('Employees Page', () => {
     jest.clearAllMocks();
   });
 
-  it('should show loading state initially', () => {
+  it('displays a loading spinner while employees are being fetched', () => {
     render(<Employees />);
     expect(document.querySelector('.animate-spin')).toBeTruthy();
   });
 
-  it('should show empty state when no employees', async () => {
+  it('shows an empty-state message when no employees exist', async () => {
     render(<Employees />);
     await waitFor(() => {
       expect(screen.getByText('No employees found')).toBeInTheDocument();
     });
   });
 
-  it('should display add employee button for admin', async () => {
+  it('shows the add-employee button for users with admin role', async () => {
     render(<Employees />);
     expect(await screen.findByText('employees.addEmployee')).toBeInTheDocument();
   });

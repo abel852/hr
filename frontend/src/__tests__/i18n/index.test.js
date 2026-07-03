@@ -1,23 +1,23 @@
 import i18n from '../../i18n';
 
 describe('i18n Configuration', () => {
-  it('should be initialized', () => {
+  it('initializes the i18n instance on import', () => {
     expect(i18n.isInitialized).toBe(true);
   });
 
-  it('should have English translations', () => {
+  it('loads English translation resources for common, nav, and auth namespaces', () => {
     expect(i18n.getResource('en', 'translation', 'common')).toBeDefined();
     expect(i18n.getResource('en', 'translation', 'nav')).toBeDefined();
     expect(i18n.getResource('en', 'translation', 'auth')).toBeDefined();
   });
 
-  it('should have Amharic translations', () => {
+  it('loads Amharic translation resources for common, nav, and auth namespaces', () => {
     expect(i18n.getResource('am', 'translation', 'common')).toBeDefined();
     expect(i18n.getResource('am', 'translation', 'nav')).toBeDefined();
     expect(i18n.getResource('am', 'translation', 'auth')).toBeDefined();
   });
 
-  it('should have dashboard translations in English', () => {
+  it('defines English translations for the dashboard namespace with all expected keys', () => {
     const t = i18n.getResource('en', 'translation', 'dashboard');
     expect(t.title).toBe('Dashboard');
     expect(t.welcome).toBe('Welcome back');
@@ -27,61 +27,61 @@ describe('i18n Configuration', () => {
     expect(t.monthlyPayroll).toBe('Monthly Payroll');
   });
 
-  it('should have dashboard translations in Amharic', () => {
+  it('defines Amharic translations for the dashboard namespace', () => {
     const t = i18n.getResource('am', 'translation', 'dashboard');
     expect(t.title).toBe('ዳሽቦርድ');
     expect(t.totalEmployees).toBe('ጠቅላላ ሰራተኞች');
   });
 
-  it('should have employee page translations', () => {
+  it('defines English translations for the employees namespace', () => {
     const en = i18n.getResource('en', 'translation', 'employees');
     expect(en.title).toBe('Employee Management');
     expect(en.addEmployee).toBe('Add Employee');
     expect(en.employeeDetails).toBe('Employee Details');
   });
 
-  it('should have attendance page translations', () => {
+  it('defines English translations for the attendance namespace', () => {
     const en = i18n.getResource('en', 'translation', 'attendance');
     expect(en.title).toBe('Attendance Management');
     expect(en.checkIn).toBe('Check In');
     expect(en.checkOut).toBe('Check Out');
   });
 
-  it('should have leave page translations', () => {
+  it('defines English translations for the leave namespace', () => {
     const en = i18n.getResource('en', 'translation', 'leave');
     expect(en.title).toBe('Leave Management');
     expect(en.requestLeave).toBe('Request Leave');
   });
 
-  it('should have payroll translations', () => {
+  it('defines English translations for the payroll namespace', () => {
     const en = i18n.getResource('en', 'translation', 'payroll');
     expect(en.title).toBe('Payroll Management');
     expect(en.grossSalary).toBe('Gross Salary');
     expect(en.netSalary).toBe('Net Salary');
   });
 
-  it('should have performance translations', () => {
+  it('defines English translations for the performance namespace', () => {
     const en = i18n.getResource('en', 'translation', 'performance');
     expect(en.title).toBe('Performance Management');
     expect(en.kpis).toBe('KPIs');
   });
 
-  it('should have settings translations', () => {
+  it('defines English translations for the settings namespace', () => {
     const en = i18n.getResource('en', 'translation', 'settings');
     expect(en.title).toBe('Settings');
   });
 
-  it('should have reports translations', () => {
+  it('defines English translations for the reports namespace', () => {
     const en = i18n.getResource('en', 'translation', 'reports');
     expect(en.title).toBe('Reports & Analytics');
   });
 
-  it('should fall back to English', () => {
+  it('falls back to English when a translation for an unsupported locale is requested', () => {
     const t = i18n.t('common.loading', { lng: 'fr' });
     expect(t).toBe('Loading...');
   });
 
-  it('should have default language as English', () => {
+  it('sets the default language to English', () => {
     expect(i18n.language).toBe('en');
   });
 });
