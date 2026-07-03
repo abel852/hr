@@ -11,12 +11,12 @@ jest.mock('../../context/AuthContext', () => ({
 }));
 
 describe('Leave Page', () => {
-  it('displays the leave management page heading', () => {
+  it('the leave page heading is visible on load', () => {
     render(<Leave />);
     expect(screen.getByText('leave.title')).toBeInTheDocument();
   });
 
-  it('shows a request-leave button for employees', () => {
+  it('employees can request time off via a dedicated button', () => {
     render(<Leave />);
     expect(screen.getByText('leave.requestLeave')).toBeInTheDocument();
   });

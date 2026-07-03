@@ -11,12 +11,12 @@ jest.mock('../../context/AuthContext', () => ({
 }));
 
 describe('Performance Page', () => {
-  it('displays the performance management page heading', () => {
+  it('the performance page heading is displayed on load', () => {
     render(<Performance />);
     expect(screen.getByText('performance.title')).toBeInTheDocument();
   });
 
-  it('shows a button to add a new performance evaluation', () => {
+  it('an add evaluation button lets admins create new performance reviews', () => {
     render(<Performance />);
     expect(screen.getByText('performance.addEvaluation')).toBeInTheDocument();
   });

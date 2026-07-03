@@ -34,7 +34,7 @@ describe('AuthContext', () => {
     jest.clearAllMocks();
   });
 
-  it('initializes with logged-out state and no user data', () => {
+  it('by default the user starts logged out with no session data', () => {
     render(
       <AuthProvider>
         <TestComponent />
@@ -44,7 +44,7 @@ describe('AuthContext', () => {
     expect(screen.getByTestId('user').textContent).toBe('no-user');
   });
 
-  it('restores an active session when a valid token exists in localStorage', async () => {
+  it('finding a valid token in storage automatically logs the user back in', async () => {
     localStorage.setItem('token', 'existing-token');
     client.get.mockResolvedValue({ data: { email: 'test@test.com', role: 'admin' } });
 
@@ -59,7 +59,7 @@ describe('AuthContext', () => {
     });
   });
 
-  it('clears the session when the stored token fails authentication', async () => {
+  it('an expired or invalid token gets cleaned up and the user is logged out', async () => {
     localStorage.setItem('token', 'bad-token');
     client.get.mockRejectedValue(new Error('Unauthorized'));
 
@@ -74,7 +74,7 @@ describe('AuthContext', () => {
     });
   });
 
-  it('authenticates the user and stores the session on valid credentials', async () => {
+  it('logging in with the right credentials sets the user as authenticated', async () => {
     client.post.mockResolvedValue({ data: { token: 'new-token', user: { email: 'a@b.com', role: 'employee' } } });
 
     render(
@@ -93,7 +93,7 @@ describe('AuthContext', () => {
     });
   });
 
-  it('reports an error message when login credentials are rejected', async () => {
+  it('bad credentials show the user a clear error message', async () => {
     client.post.mockRejectedValue({ response: { data: { message: 'Invalid credentials' } } });
 
     render(
@@ -112,7 +112,7 @@ describe('AuthContext', () => {
     });
   });
 
-  it('removes the token from localStorage and resets to logged-out state on logout', async () => {
+  it('logging out wipes the token and returns the app to its initial state', async () => {
     localStorage.setItem('token', 'some-token');
     client.get.mockResolvedValue({ data: { email: 'test@test.com', role: 'admin' } });
 
@@ -134,7 +134,7 @@ describe('AuthContext', () => {
     expect(localStorage.getItem('token')).toBeNull();
   });
 
-  it('resets the error state to null when clearError is called', async () => {
+  it('calling clearError dismisses any visible error message', async () => {
     client.post.mockRejectedValue({ response: { data: { message: 'Error' } } });
 
     render(
@@ -158,7 +158,7 @@ describe('AuthContext', () => {
     expect(screen.getByTestId('error').textContent).toBe('no-error');
   });
 
-  it('throws an error when useAuth is consumed outside of AuthProvider', () => {
+  it('using useAuth outside an AuthProvider is caught and reported as an error', () => {
     expect(() => render(<TestComponent />)).toThrow('useAuth must be used within an AuthProvider');
   });
 });

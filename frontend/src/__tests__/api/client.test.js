@@ -5,21 +5,21 @@ describe('API Client', () => {
     localStorage.clear();
   });
 
-  it('creates an axios client with a defined baseURL', () => {
+  it('the API client comes with a baseURL ready to go', () => {
     expect(client.defaults.baseURL).toBeDefined();
   });
 
-  it('points the default baseURL to localhost:5000/api', () => {
+  it('by default all requests target localhost:5000/api', () => {
     expect(client.defaults.baseURL).toBe('http://localhost:5000/api');
   });
 
-  it('attaches a Bearer token to outgoing requests when a token is stored', () => {
+  it('when the user has a token saved, the client sends it as a Bearer header', () => {
     localStorage.setItem('token', 'test-token-123');
     const config = client.interceptors.request.handlers[0].fulfilled({ headers: {} });
     expect(config.headers.Authorization).toBe('Bearer test-token-123');
   });
 
-  it('omits the Authorization header when no token is present', () => {
+  it('without a saved token, no Authorization header is sent', () => {
     const config = client.interceptors.request.handlers[0].fulfilled({ headers: {} });
     expect(config.headers.Authorization).toBeUndefined();
   });

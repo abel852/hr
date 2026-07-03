@@ -36,18 +36,18 @@ describe('Dashboard Page', () => {
     jest.useRealTimers();
   });
 
-  it('displays a loading spinner on initial render', () => {
+  it('a spinner appears while the dashboard fetches its data', () => {
     render(<Dashboard />);
     expect(document.querySelector('.animate-spin')).toBeTruthy();
   });
 
-  it('shows the welcome message once data has finished loading', () => {
+  it('once loaded, the dashboard greets the user with a welcome message', () => {
     render(<Dashboard />);
     act(() => { jest.advanceTimersByTime(1000); });
     expect(screen.getByText(/dashboard.welcome/)).toBeInTheDocument();
   });
 
-  it('renders stat cards for total employees, present today, pending leaves, and payroll', () => {
+  it('four key metric cards — total employees, present today, pending leaves, and payroll — are rendered', () => {
     render(<Dashboard />);
     act(() => { jest.advanceTimersByTime(1000); });
     expect(screen.getByText('dashboard.totalEmployees')).toBeInTheDocument();
@@ -56,20 +56,20 @@ describe('Dashboard Page', () => {
     expect(screen.getByText('dashboard.monthlyPayroll')).toBeInTheDocument();
   });
 
-  it('renders attendance and leave request charts after loading', () => {
+  it('attendance overview and leave request charts show up after loading', () => {
     render(<Dashboard />);
     act(() => { jest.advanceTimersByTime(1000); });
     expect(screen.getByText('dashboard.attendanceOverview')).toBeInTheDocument();
     expect(screen.getByText('dashboard.leaveRequests')).toBeInTheDocument();
   });
 
-  it('shows the recent activities timeline after loading', () => {
+  it('a recent activity feed is displayed once the dashboard is ready', () => {
     render(<Dashboard />);
     act(() => { jest.advanceTimersByTime(1000); });
     expect(screen.getByText('dashboard.recentActivities')).toBeInTheDocument();
   });
 
-  it('shows the upcoming birthdays section after loading', () => {
+  it('upcoming birthdays are listed in their own section after loading', () => {
     render(<Dashboard />);
     act(() => { jest.advanceTimersByTime(1000); });
     expect(screen.getByText('dashboard.upcomingBirthdays')).toBeInTheDocument();

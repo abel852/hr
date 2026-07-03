@@ -64,7 +64,7 @@ describe('ThemeContext', () => {
     expect(localStorage.getItem('theme')).toBe('light');
   });
 
-  it('applies or removes the dark class on the document root element', () => {
+  it('switching themes adds or removes the dark class on the html element', () => {
     const { rerender } = render(
       <ThemeProvider>
         <TestComponent />
@@ -78,7 +78,7 @@ describe('ThemeContext', () => {
     expect(document.documentElement.classList.contains('dark')).toBe(true);
   });
 
-  it('throws an error when useTheme is consumed outside of ThemeProvider', () => {
+  it('using useTheme outside a ThemeProvider raises a clear error', () => {
     expect(() => render(<TestComponent />)).toThrow('useTheme must be used within a ThemeProvider');
   });
 });
