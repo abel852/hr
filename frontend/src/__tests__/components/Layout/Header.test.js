@@ -1,0 +1,36 @@
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import Header from '../../../components/Layout/Header';
+
+jest.mock('react-i18next', () => ({
+  useTranslation: () => ({ t: (key) => key, i18n: { language: 'en', changeLanguage: jest.fn() } }),
+}));
+
+jest.mock('../../../context/AuthContext', () => ({
+  useAuth: () => ({ user: { role: 'admin', email: 'admin@test.com' }, logout: jest.fn() }),
+}));
+
+jest.mock('../../../context/ThemeContext', () => ({
+  useTheme: () => ({ isDark: false, toggleTheme: jest.fn() }),
+}));
+
+describe('Header Component', () => {
+  it('should render the HR Management System title', () => {
+    render(<Header />);
+    expect(screen.getByText('HR Management System')).toBeInTheDocument();
+  });
+
+  it('should render theme toggle button', () => {
+    render(<Header />);
+    const buttons = screen.getAllByRole('button');
+    expect(buttons.length).toBeGreaterThanOrEqual(1);
+  });
+
+  it('should open user menu on click', () => {
+    render(<Header />);
+    const userButtons = screen.getAllByRole('button');
+    const lastButton = userButtons[userButtons.length - 1];
+    fireEvent.click(lastButton);
+    expect(screen.getByText('nav.profile')).toBeInTheDocument();
+  });
+});
