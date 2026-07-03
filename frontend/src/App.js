@@ -134,6 +134,4 @@ const App = () => {
 
 export default App;
 
-// commit-94: feat(frontend): add routing configuration
 
-// commit-95: feat(frontend): add protected routes

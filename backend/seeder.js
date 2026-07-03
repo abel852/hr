@@ -46,6 +46,4 @@ const seedUsers = async () => {
 
 seedUsers();
 
-// commit-89: feat(seed): add department seeding
 
-// commit-90: feat(seed): add employee seeding

@@ -142,6 +142,4 @@ const Header = ({ onMenuClick }) => {
 
 export default Header;
 
-// commit-128: feat(layout): add user avatar dropdown
 
-// commit-129: feat(layout): add notification bell icon

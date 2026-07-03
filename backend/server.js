@@ -173,12 +173,7 @@ app.listen(PORT, () => {
   }, 60 * 1000);
 });
 
-// commit-1: feat(server): add CORS configuration for production
 
-// commit-2: fix(server): increase payload size limit for file uploads
 
-// commit-3: feat(server): add request logging middleware
 
-// commit-4: feat(server): add health check endpoint
 
-// commit-5: chore(server): configure static file serving for uploads

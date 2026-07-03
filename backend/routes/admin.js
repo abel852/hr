@@ -115,6 +115,4 @@ module.exports = router;
 
 
 
-// commit-87: feat(admin): add admin dashboard endpoint
 
-// commit-88: feat(admin): add system logs endpoint

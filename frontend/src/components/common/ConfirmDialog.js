@@ -36,4 +36,3 @@ const ConfirmDialog = ({ open, title = 'Are you sure?', message = 'This action c
 
 export default ConfirmDialog;
 
-// commit-132: feat(ui): add customizable confirm dialog

@@ -605,6 +605,4 @@ i18n
 
 export default i18n;
 
-// commit-133: feat(i18n): add i18n configuration
 
-// commit-134: feat(i18n): add language switcher support

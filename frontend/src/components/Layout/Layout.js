@@ -37,4 +37,3 @@ const Layout = () => {
 
 export default Layout;
 
-// commit-125: feat(layout): add responsive layout container

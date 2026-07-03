@@ -113,6 +113,4 @@ const Sidebar = ({ isOpen, onClose }) => {
 
 export default Sidebar;
 
-// commit-126: feat(layout): add navigation menu items
 
-// commit-127: feat(layout): add sidebar collapse toggle

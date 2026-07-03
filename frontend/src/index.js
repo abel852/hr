@@ -10,6 +10,4 @@ root.render(
   </React.StrictMode>
 );
 
-// commit-92: chore(frontend): add React strict mode
 
-// commit-93: feat(frontend): add error boundary

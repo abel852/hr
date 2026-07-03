@@ -155,6 +155,4 @@ const Reports = () => {
 
 export default Reports;
 
-// commit-122: feat(reports): add report builder UI
 
-// commit-123: feat(reports): add export report button

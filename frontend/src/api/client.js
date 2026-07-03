@@ -15,8 +15,5 @@ client.interceptors.request.use((config) => {
 
 export default client;
 
-// commit-103: feat(api): add axios instance with interceptors
 
-// commit-104: feat(api): add request retry logic
 
-// commit-105: feat(api): add request cancellation support

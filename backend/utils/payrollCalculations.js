@@ -95,6 +95,4 @@ module.exports = {
   generatePayslipData
 };
 
-// commit-67: feat(payroll): add tax bracket calculation
 
-// commit-68: feat(payroll): add overtime rate calculation

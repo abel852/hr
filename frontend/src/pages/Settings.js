@@ -146,4 +146,3 @@ const Settings = () => {
 
 export default Settings;
 
-// commit-124: feat(settings): add user profile settings

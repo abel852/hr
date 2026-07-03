@@ -172,6 +172,4 @@ const Performance = () => {
 
 export default Performance;
 
-// commit-118: feat(performance): add performance review form
 
-// commit-119: feat(performance): add KPI dashboard

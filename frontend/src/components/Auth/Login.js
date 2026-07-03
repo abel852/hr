@@ -206,6 +206,4 @@ const Login = () => {
 
 export default Login;
 
-// commit-130: feat(auth): add login form validation
 
-// commit-131: feat(auth): add remember me feature

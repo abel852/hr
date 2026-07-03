@@ -158,8 +158,5 @@ module.exports = router;
 
 
 
-// commit-73: feat(performance): add performance review endpoint
 
-// commit-74: feat(performance): add manager evaluation endpoint
 
-// commit-75: feat(performance): add performance report endpoint

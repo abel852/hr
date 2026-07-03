@@ -332,6 +332,4 @@ const Attendance = () => {
 
 export default Attendance;
 
-// commit-112: feat(attendance): add attendance calendar view
 
-// commit-113: feat(attendance): add clock-in button UI
